@@ -6,7 +6,7 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
 
 2) Execute the below lines in order: 
 
-    ```
+    
     curl --silent --location https://rpm.nodesource.com/setup_4.x | sudo bash -
 
     sudo yum -y install nodejs
@@ -14,7 +14,7 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
     sudo yum -y install gcc-c++ make
     
     curl --silent --location "https://www.npmjs.org/install.sh" | sudo bash -
-    ```
+    
 
 3) Run `node --version && npm --version` to confirm it worked!
 
