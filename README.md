@@ -5,6 +5,7 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
 1) SSH into your EC2 instance.
 
 2) Execute the below lines in order: 
+
     ```
     curl --silent --location https://rpm.nodesource.com/setup_4.x | sudo bash -
 
