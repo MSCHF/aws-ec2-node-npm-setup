@@ -56,6 +56,6 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
     const server = https.createServer({
           ca: fs.readFileSync('/etc/ssl/certs/internetpillowfight_com.ca-bundle', 'utf-8'),
           key: fs.readFileSync('/etc/ssl/private/privatekey.pem', 'utf-8'),
-          cert: fs.readFileSync('/etc/ssl/certs/internetpillowfight_com.crt', 'utf-8')
+          cert: fs.readFileSync('/etc/ssl/certs/sitename_com.crt', 'utf-8')
     }, app);
 
