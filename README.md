@@ -12,7 +12,7 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
 
 	`sudo yum -y install nodejs`
 
-	`sudo yum -y install gcc-c++ make
+	`sudo yum -y install gcc-c++ make`
 
 	`curl --silent --location "https://www.npmjs.org/install.sh" | sudo bash -`
 
