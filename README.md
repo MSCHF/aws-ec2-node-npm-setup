@@ -1,5 +1,13 @@
 # SO YOU WANNA SET UP A NODE-BASED EC2 INSTANCE HUH!?
 
+## Prerequisites
+
+* Set up an EC2 instance
+
+* Download the Key Pair file (.pem) and keep it somewhere safe. 
+
+* Run `chmod 400 ~/path/to/key.pem` otherwise you cannot SSH in. 
+
 ## Steps to Install Node & NPM on EC2
 
 Here are fast steps to set up node and npm on an EC2 instance. This is targeted for Node v4.x and can be adapted for whatever version you need.
