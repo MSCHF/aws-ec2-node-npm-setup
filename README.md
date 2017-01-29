@@ -26,6 +26,10 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
 
 3. Run `node --version && npm --version` to confirm it worked!
 
+## Installing git
+
+Simply run `sudo yum install git`.
+
 ## Steps to Add SSL to your EC2 Instance
 
 1. In the security group for your EC2 instance, make sure you add the https rule (port 443 to '0.0.0.0/0').
