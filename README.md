@@ -16,13 +16,13 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
 
 2. Execute the below lines in order:
 
-	`curl --silent --location https://rpm.nodesource.com/setup_4.x | sudo bash -`
+	`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
 
-	`sudo yum -y install nodejs`
+	`exit`
 
-	`sudo yum -y install gcc-c++ make`
+	*Log back into the server*
 
-	`curl --silent --location "https://www.npmjs.org/install.sh" | sudo bash -`
+	`nvm install node`
 
 3. Run `node --version && npm --version` to confirm it worked!
 
