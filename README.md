@@ -26,6 +26,10 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
 
 3. Run `node --version && npm --version` to confirm it worked!
 
+4. Lastly, you need to alias `sudo` since `nvm` doesn't alter the PATH for privileged users. Add this to the end of your ~/.bashrc file. 
+
+  `alias sudo='sudo env PATH=$PATH:$NVM_BIN'`
+
 ## Installing git
 
 Simply run `sudo yum install git`.
