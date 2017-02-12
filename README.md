@@ -81,11 +81,11 @@ This should allow you to push or pull without continuously entering your credent
     const app = express();
 
     const server = https.createServer({
-          ca: fs.readFileSync('/etc/ssl/certs/internetpillowfight_com.ca-bundle', 'utf-8'),
+          ca: fs.readFileSync('/etc/ssl/certs/sitename_com.ca-bundle', 'utf-8'),
           key: fs.readFileSync('/etc/ssl/private/privatekey.pem', 'utf-8'),
           cert: fs.readFileSync('/etc/ssl/certs/sitename_com.crt', 'utf-8')
     }, app);
-
+    ```
 
 ## UBUNTU/DEBIAN ONLY - Run Scripts On Privileged Ports (The Right Way!)
 
