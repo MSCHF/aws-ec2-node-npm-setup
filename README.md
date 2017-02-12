@@ -35,7 +35,7 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
 
 ## Installing git
 
-Simply run `sudo yum install git`.
+If you're on Amazon Linux simply run `sudo yum install git`. If you're on Ubuntu just type `git` to see if it is installed. If it isn't, type `sudo apt-get install git`.
 
 
 ## Caching Git credentials 
