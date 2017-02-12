@@ -1,5 +1,6 @@
 # SO YOU WANNA SET UP A NODE-BASED EC2 INSTANCE HUH!?
 
+
 ## Prerequisites
 
 * Set up an EC2 instance
@@ -7,6 +8,7 @@
 * Download the Key Pair file (.pem) and keep it somewhere safe. 
 
 * Run `chmod 400 ~/path/to/key.pem` otherwise you cannot SSH in. 
+
 
 ## Steps to Install Node & NPM on EC2
 
@@ -30,9 +32,18 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
 
   `alias sudo='sudo env PATH=$PATH:$NVM_BIN'`
 
+
 ## Installing git
 
 Simply run `sudo yum install git`.
+
+
+## Caching Git credentials 
+
+Run the following: `git config --global credential.helper 'cache --timeout=99999'`. 
+
+This should allow you to push or pull without continuously entering your credentials. 
+
 
 ## Steps to Add SSL to your EC2 Instance
 
