@@ -86,3 +86,9 @@ This should allow you to push or pull without continuously entering your credent
           cert: fs.readFileSync('/etc/ssl/certs/sitename_com.crt', 'utf-8')
     }, app);
 
+
+## UBUNTU/DEBIAN ONLY - Run Scripts On Privileged Ports (The Right Way!)
+
+Use `authbind`. 
+
+Source: https://thomashunter.name/blog/using-authbind-with-node-js/
