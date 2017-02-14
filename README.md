@@ -38,6 +38,17 @@ Here are fast steps to set up node and npm on an EC2 instance. This is targeted 
 If you're on Amazon Linux simply run `sudo yum install git`. If you're on Ubuntu just type `git` to see if it is installed. If it isn't, type `sudo apt-get install git`.
 
 
+## VIM Setup
+
+First install Vundle, a Vim package manager. 
+
+Run `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`. 
+
+Then grab your `.vimrc` file, for example I run: `git clone https://github.com/tetreault/vimrc.git && cp vimrc/.vimrc ~/.`.
+
+Then run `vim` and type `:PluginInstall`. 
+
+
 ## Caching Git credentials 
 
 Run the following: `git config --global credential.helper 'cache --timeout=99999'`. 
