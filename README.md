@@ -130,6 +130,7 @@ This should allow you to push or pull without continuously entering your credent
 
     `ssh -i ~/path/to/their/key.pem user_name@ec2-your-instance-name.compute.amazonaws.com`
 
+Source: https://aws.amazon.com/articles/1233/
 
 ## UBUNTU/DEBIAN ONLY - Run Scripts On Privileged Ports (The Right Way!)
 
