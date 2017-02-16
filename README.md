@@ -98,6 +98,39 @@ This should allow you to push or pull without continuously entering your credent
     }, app);
     ```
 
+## Adding A Public Key to Grant SSH Access for A User
+
+1. Get the user's public key
+
+2. Secure copy the user's public key to the EC2 instance: 
+
+    `scp -i ~/path/to/key.pem new_user_key.pub (ubuntu or ec2-user)@ec2-your-instance-name.compute.amazonaws.com:/tmp`
+
+3. SSH into the server yourself as root to create the user account with the following commands: 
+
+    `sudo su && useradd -c "firstname lastname" user -m`
+
+4. Now you have to place their key into their SSH authorized keys file:
+
+    `cd ~user`
+
+    `mkdir .ssh`
+    
+    `chmod 700 .ssh`
+    
+    `chown user:user .ssh`
+    
+    `cat /tmp/new_user.pub >> .ssh/authorized_keys`
+    
+    `chmod 600 .ssh/authorized_keys`
+    
+    `chown user:user .ssh/authorized_keys`
+
+5. Now have the user test logging in via SSH and they should be ready to go! 
+
+    `ssh -i ~/path/to/their/key.pem user_name@ec2-your-instance-name.compute.amazonaws.com`
+
+
 ## UBUNTU/DEBIAN ONLY - Run Scripts On Privileged Ports (The Right Way!)
 
 Use `authbind`. 
