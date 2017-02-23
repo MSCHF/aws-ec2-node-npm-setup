@@ -58,6 +58,8 @@ This should allow you to push or pull without continuously entering your credent
 
 ## Steps to Add SSL to your EC2 Instance
 
+Either use EFF's [CertBot](https://certbot.eff.org/) or follow the below: 
+
 1. In the security group for your EC2 instance, make sure you add the https rule (port 443 to '0.0.0.0/0').
 
 2. Give your EC2 instance an elastic IP.
