@@ -425,9 +425,3 @@ Either use EFF's [CertBot](https://certbot.eff.org/) or follow the below:
     `ssh -i ~/path/to/their/key.pem user_name@ec2-your-instance-name.compute.amazonaws.com`
 
 Source: https://aws.amazon.com/articles/1233/
-
-## UBUNTU/DEBIAN ONLY - Run Scripts On Privileged Ports (The Right Way!)
-
-Use `authbind`. 
-
-Source: https://thomashunter.name/blog/using-authbind-with-node-js/
