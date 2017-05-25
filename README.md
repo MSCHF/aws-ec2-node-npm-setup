@@ -196,7 +196,7 @@ Go to the root of the nginx subdir `cd /etc/nginx/` and type `mkdir sites-availa
 ##
 
 
-upstream legacyfm {
+upstream YOUR_DOMAIN_NAME {
   server localhost:8080 fail_timeout=0;
   keepalive 60;
 }
@@ -213,11 +213,11 @@ server {
 	server_name _;
 
 	location / {
-		try_files $uri @legacyfm;
+		try_files $uri @YOUR_DOMAIN_NAME;
 	}
 
-	location @legacyfm {
-                proxy_pass http://legacyfm;
+	location @YOUR_DOMAIN_NAME {
+                proxy_pass http://YOUR_DOMAIN_NAME;
                 proxy_set_header Host $host;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
                 proxy_set_header X-Forwarded-Proto $scheme;
@@ -281,7 +281,7 @@ Go to the root of the nginx subdir `cd /etc/nginx/` and type `mkdir sites-enable
 ##
 
 
-upstream legacyfm {
+upstream YOUR_DOMAIN_NAME {
   server localhost:8080 fail_timeout=0;
   keepalive 60;
 }
@@ -298,11 +298,11 @@ server {
 	server_name _;
 
 	location / {
-		try_files $uri @legacyfm;
+		try_files $uri @YOUR_DOMAIN_NAME;
 	}
 
-	location @legacyfm {
-                proxy_pass http://legacyfm;
+	location @YOUR_DOMAIN_NAME {
+                proxy_pass http://YOUR_DOMAIN_NAME;
                 proxy_set_header Host $host;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
                 proxy_set_header X-Forwarded-Proto $scheme;
