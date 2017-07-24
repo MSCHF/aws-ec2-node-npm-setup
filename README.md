@@ -203,28 +203,10 @@ upstream YOUR_DOMAIN_NAME {
 
 #HTTP
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
-
-	root /home/ubuntu/public_html;
-
-	index index.html index.htm index.nginx-debian.html;
-
-	server_name _;
-
-	location / {
-		try_files $uri @YOUR_DOMAIN_NAME;
-	}
-
-	location @YOUR_DOMAIN_NAME {
-                proxy_pass http://YOUR_DOMAIN_NAME;
-                proxy_set_header Host $host;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header X-Forwarded-Proto $scheme;
-                proxy_http_version 1.1;
-                proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection "upgrade";
-         }
+  listen 80;
+  listen [::]:80;
+  server_name    YOUR_DOMAIN_NAME;
+  return         301 https://$server_name;
 }
 
 # HTTPS - proxy requests on to local Node.js app:
@@ -288,28 +270,10 @@ upstream YOUR_DOMAIN_NAME {
 
 #HTTP
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
-
-	root /home/ubuntu/public_html;
-
-	index index.html index.htm index.nginx-debian.html;
-
-	server_name _;
-
-	location / {
-		try_files $uri @YOUR_DOMAIN_NAME;
-	}
-
-	location @YOUR_DOMAIN_NAME {
-                proxy_pass http://YOUR_DOMAIN_NAME;
-                proxy_set_header Host $host;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header X-Forwarded-Proto $scheme;
-                proxy_http_version 1.1;
-                proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection "upgrade";
-         }
+  listen 80;
+  listen [::]:80;
+  server_name    YOUR_DOMAIN_NAME;
+  return         301 https://$server_name;
 }
 
 # HTTPS - proxy requests on to local Node.js app:
